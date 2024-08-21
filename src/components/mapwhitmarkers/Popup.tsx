@@ -29,11 +29,10 @@ export function PopupContainer({
           {country} {emoji}
         </h2>
 
-        {/* TODO: revisar native  */}
         <div className="mt-2 text-sm text-gray-600  flex flex-col">
           Su capital es {capital}, donde manejan la moneda de {currency}. Sus
-          habitantes son reconocidos como {native} y se encuentra en el
-          continente {continent.name}.
+          habitantes son reconocidos como de {native} y se encuentra en el
+          continente de {continent.name}.
         </div>
 
         <div className="flex justify-end mt-4">

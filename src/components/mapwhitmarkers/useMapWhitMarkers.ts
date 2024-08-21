@@ -13,11 +13,40 @@ import {
 
 export function useMapWhitMarkers({ locations }: MapWithMarkersProps) {
   const [search, setSearch] = useState("");
-
   const { loading, error, data } = useQuery<{ countries: CountriesGraphQL[] }>(
     GET_COUNTRIES,
-    { client }
+    {
+      variables: { codes: locations.map((location) => location["ISO Code"]) },
+      client,
+    }
   );
+
+  /* 
+  @@ Dejo comentado el fetch realizado con fetchGraphQL para que puedas comparar con el uso de ApolloClient, el cual es más sencillo y limpio.
+  */
+  // const [data, setData] = useState<CountriesGraphQL[]>();
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState("");
+  // useEffect(() => {
+  //   fetchGraphQL(`
+  //     query {
+  //       countries {
+  //         code
+  //         name
+  //         capital
+  //       }
+  //     }
+  //   `)
+  //   .then(data => {
+  //     console.log(data)
+  //     setData(data);
+  //     setLoading(false);
+  //   })
+  //   .catch(() => {
+  //     setError("Fallo al cargar los datos");
+  //     setLoading(false);
+  //   });
+  // }, []);
 
   const countryMap = useMemo(() => {
     return new Map(

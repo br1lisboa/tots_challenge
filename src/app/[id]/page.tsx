@@ -1,12 +1,10 @@
 "use client";
 
-import { Form, Hero, SlideShow } from "@/components";
-import countriesJSON from "@/data/countries.json";
+import { Contact, Hero, SlideShow } from "@/components";
 import { notFound } from "next/navigation";
 
 import imagesDB from "@/data/desc.json";
 import Link from "next/link";
-import Image from "next/image";
 
 interface CountryPageProps {
   params: {
@@ -23,7 +21,7 @@ export default function CountryPage({ params: { id } }: CountryPageProps) {
 
   return (
     <>
-      <Hero className="pt-4"/>
+      <Hero className="pt-4" />
       <section className="bg-transparent h-full max-w-[900px] m-auto py-8">
         <div className="lg:-mx-6 lg:flex lg:items-center">
           <SlideShow
@@ -33,7 +31,9 @@ export default function CountryPage({ params: { id } }: CountryPageProps) {
           />
 
           <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0 px-4 md:px-0">
-            <p className="text-5xl font-semibold text-blue-500 pt-28 md:pt-0">“</p>
+            <p className="text-5xl font-semibold text-blue-500 pt-28 md:pt-0">
+              “
+            </p>
 
             <h1 className="text-2xl font-semibold text-gray-800  lg:text-3xl lg:w-96">
               {country?.name}
@@ -53,7 +53,7 @@ export default function CountryPage({ params: { id } }: CountryPageProps) {
         </div>
       </section>
 
-      <Form />
+      <Contact />
     </>
   );
 }

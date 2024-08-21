@@ -1,4 +1,4 @@
-export * from "./ui/form/Form";
+export * from "./ui/Contact";
 
 export * from "./ui/Slider";
 

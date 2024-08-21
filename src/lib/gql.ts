@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 export const GET_COUNTRIES = gql`
-  query GetCountries {
-    countries {
+  query GetCountries($codes: [String!]) {
+    countries(filter: { code: { in: $codes } }) {
       name
       code
       continent {
@@ -12,6 +12,17 @@ export const GET_COUNTRIES = gql`
       currency
       emoji
       native
+    }
+  }
+`;
+
+
+export const QUERY = `
+  query {
+    countries {
+      code
+      name
+      capital
     }
   }
 `;
