@@ -1,0 +1,132 @@
+[
+  {
+    "img": [
+      "nick-night-6FsGMMDcmSE-unsplash-eeuu.jpg",
+      "manoj-kulkarni-DT2t7iC9_HA-unsplash-eeuu.jpg",
+      "benjamin-esteves-rmBzuBiSozo-unsplash-eeuu.jpg"
+    ],
+    "descripcion": "En los Estados Unidos, el clima es tan variado como su gente, con estaciones bien definidas que van desde inviernos nevados en el norte hasta veranos cálidos en el sur. Los estadounidenses son conocidos por su diversidad cultural, lo que se refleja en la variedad de tradiciones, costumbres y festividades que se celebran en todo el país. La seguridad en los Estados Unidos varía de una región a otra, con áreas urbanas más grandes que a veces presentan desafíos, pero en general, es un lugar seguro para viajar. Es un destino excelente para unas vacaciones, con una infraestructura turística bien desarrollada, parques nacionales impresionantes y ciudades icónicas como Nueva York, Los Ángeles y Miami que ofrecen una experiencia inolvidable.",
+    "id": "US",
+    "name": "Estados Unidos"
+  },
+  {
+    "img": [
+      "bruno-soares-Pa8ofq11OGg-unsplash-canada.jpg",
+      "dawson-lovell-W_MUqtuHwyY-unsplash-canada.jpg",
+      "redd-f-gdQnsMbhkUs-unsplash-canada.jpg"
+    ],
+    "descripcion": "Canadá es un país de inviernos fríos y paisajes impresionantes, con vastas extensiones de naturaleza intacta que invitan a la exploración. Los canadienses son conocidos por ser amables y acogedores, siempre dispuestos a ayudar a los visitantes. La cultura en Canadá es una mezcla de influencias británicas y francesas, lo que se refleja en sus ciudades bilingües como Montreal y Ottawa. La seguridad en Canadá es alta, lo que lo convierte en un destino ideal para familias y viajeros solitarios. En cuanto a vacaciones, Canadá ofrece desde aventuras al aire libre en las Montañas Rocosas hasta la vibrante vida urbana de Toronto y Vancouver. Es un lugar donde cada temporada ofrece algo especial.",
+    "id": "CA",
+    "name": "Canadá"
+  },
+  {
+    "img": [
+      "filip-gielda-VPavA7BBxK0-unsplash-mexico.jpg",
+      "jezael-melgoza-3snKY0XMKwg-unsplash-mexico.jpg",
+      "spencer-watson-jG1qamY6TGw-unsplash-mexico.jpg"
+    ],
+    "descripcion": "México es un país cálido, tanto en su clima como en su gente. La hospitalidad mexicana es conocida en todo el mundo, con una cultura rica en tradiciones, música y gastronomía que deleitan a cualquiera que visite. El clima en México varía según la región, pero generalmente se disfruta de temperaturas cálidas y agradables durante todo el año. En cuanto a seguridad, hay que tener precaución en ciertas áreas, pero muchas de las zonas turísticas más populares, como Cancún, Playa del Carmen y Ciudad de México, son seguras y acogedoras para los viajeros. México es un destino vibrante y lleno de vida, ideal para quienes buscan experiencias culturales auténticas, playas paradisíacas y una rica historia.",
+    "id": "MX",
+    "name": "México"
+  },
+  {
+    "img": [
+      "agustin-diaz-gargiulo-7F65HDP0-E0-unsplash-brazil.jpg",
+      "agustin-diaz-gargiulo-GTLJklnjn-E-unsplash-brazil.jpg",
+      "aidan-formigoni-ZNh2lhVaEqw-unsplash-brazil.jpg"
+    ],
+    "descripcion": "Brasil es un lugar de sol, playas y selvas exuberantes que cautivan a todos los que lo visitan. La alegría de los brasileños es contagiosa, y su cultura es vibrante y llena de vida, con el carnaval como una de sus expresiones más conocidas. El clima en Brasil es cálido y tropical, ideal para disfrutar de sus extensas costas y la exuberante Amazonia. En términos de seguridad, es aconsejable ser prudente en las grandes ciudades, pero muchas áreas turísticas son seguras y bien vigiladas. Brasil es perfecto para unas vacaciones llenas de música, baile y naturaleza impresionante, con destinos como Río de Janeiro, Salvador y la región del Pantanal que no te dejarán indiferente.",
+    "id": "BR",
+    "name": "Brasil"
+  },
+  {
+    "img": [
+      "julia-caesar-jeXkw2HR1SU-unsplash-argentina.jpg",
+      "nestor-barbitta-QhQ4WgX77G0-unsplash-argentina.jpg",
+      "rachel-jarboe-tZpmdFfU5gQ-unsplash-argentina.jpg"
+    ],
+    "descripcion": "Argentina es un país de contrastes, con inviernos fríos en el sur y veranos calurosos en el norte. La gente en Argentina es apasionada y cálida, conocida por su amor por el fútbol, el tango y la carne asada. La cultura argentina es una mezcla de influencias europeas, especialmente italianas y españolas, lo que se refleja en su arquitectura, gastronomía y tradiciones. La seguridad en Argentina es similar a la de otros países de la región, con precauciones necesarias en áreas urbanas más grandes, pero en general es un país seguro para los turistas. Argentina es un destino fascinante para unas vacaciones, ofreciendo desde la cosmopolita Buenos Aires hasta la impresionante naturaleza de la Patagonia y las Cataratas del Iguazú.",
+    "id": "AR",
+    "name": "Argentina"
+  },
+  {
+    "img": [
+      "juan-pablo-ahumada-Y9Wp5keJsn8-unsplash-chile.jpg",
+      "thomas-griggs-anvAqsSbtms-unsplash-chile.jpg",
+      "paula-porto-Fma1wE_zIf8-unsplash-chile.jpg"
+    ],
+    "descripcion": "Chile es un país alargado, lleno de contrastes climáticos, que van desde el desierto más árido del mundo en el norte hasta glaciares y montañas en el sur. Los chilenos son amables y acogedores, con una cultura marcada por su geografía única, que se refleja en su música, comida y festividades. El clima en Chile varía considerablemente, lo que permite disfrutar de una amplia gama de actividades al aire libre durante todo el año. La seguridad en Chile es alta, especialmente en comparación con otros países de América Latina, lo que lo convierte en un destino atractivo para los turistas. Chile es ideal para unas vacaciones llenas de aventura, con opciones como explorar el desierto de Atacama, los viñedos del Valle Central o la majestuosa Patagonia.",
+    "id": "CL",
+    "name": "Chile"
+  },
+  {
+    "img": [
+      "milo-miloezger-ZLLwL9bKlnk-unsplash-colombia.jpg",
+      "christian-holzinger-wVnBd8wm1Cc-unsplash-colombia.jpg",
+      "reiseuhu-JINIW3yzobc-unsplash-colombia.jpg"
+    ],
+    "descripcion": "Colombia es un país cálido, tanto en su clima tropical como en la calidez de su gente. Los colombianos son conocidos por su amabilidad y por hacer sentir a los visitantes como en casa. La cultura en Colombia es rica y diversa, con influencias africanas, indígenas y españolas que se combinan en su música, danzas y gastronomía. El clima en Colombia varía desde las cálidas costas del Caribe hasta las frescas montañas de los Andes, ofreciendo algo para todos los gustos. En cuanto a seguridad, Colombia ha mejorado mucho en los últimos años, y muchas de sus áreas turísticas son seguras y acogedoras. Colombia es un destino maravilloso para unas vacaciones llenas de color, música y paisajes impresionantes, con lugares como Cartagena, Medellín y el Eje Cafetero que capturan la esencia de este país.",
+    "id": "CO",
+    "name": "Colombia"
+  },
+  {
+    "img": [
+      "joe-green-nsy6zTjk5hM-unsplash-peru.jpg",
+      "mckayla-crump-hjanvZlqoB8-unsplash-peru.jpg",
+      "ashim-d-silva-4RcFjVc8JLQ-unsplash-peru.jpg"
+    ],
+    "descripcion": "Perú es un país de paisajes variados, desde la costa hasta la selva amazónica, pasando por los Andes. La gente en Perú es amable y orgullosa de su herencia cultural, que incluye una de las civilizaciones más antiguas del mundo. El clima en Perú varía según la región, desde las cálidas playas del Pacífico hasta las frías alturas andinas. La seguridad en Perú es razonable, con las precauciones habituales en áreas turísticas, pero en general, es un destino seguro. Perú es ideal para unas vacaciones llenas de historia, cultura y naturaleza, con sitios impresionantes como Machu Picchu, el Valle Sagrado y las líneas de Nazca que son verdaderas maravillas del mundo.",
+    "id": "PE",
+    "name": "Perú"
+  },
+  {
+    "img": [
+      "evan-wise-OtVPcAqhi54-unsplash-ecuador.jpg",
+      "cesar-viteri-zcyiFpt0E_E-unsplash-ecuador.jpg",
+      "fernando-tapia-qP2bR5Ky3JE-unsplash-ecuador.jpg"
+    ],
+    "descripcion": "Ecuador es un país pequeño pero diverso, con climas que van desde las costas cálidas hasta las frías montañas de los Andes. Los ecuatorianos son amables y acogedores, orgullosos de su rica herencia cultural que incluye influencias indígenas y coloniales. El clima en Ecuador permite disfrutar de una variedad de actividades al aire libre durante todo el año, desde el senderismo en los Andes hasta la exploración de la selva amazónica. La seguridad en Ecuador es razonable, aunque se recomienda precaución en ciertas áreas urbanas. Ecuador es un destino excelente para unas vacaciones llenas de aventura y cultura, con atracciones como las Islas Galápagos, Quito y el Parque Nacional Cotopaxi que ofrecen experiencias inolvidables.",
+    "id": "EC",
+    "name": "Ecuador"
+  },
+  {
+    "img": [
+      "jim-romero-b6Pzz9yrjsg-unsplash-venezuela.jpg",
+      "jorge-brito-YA9ri6dhmS0-unsplash-venezuela.jpg",
+      "leonardo-guillen-bpY71YtEC-o-unsplash-venezuela.jpg"
+    ],
+    "descripcion": "Venezuela es un país tropical con un clima cálido y paisajes que quitan el aliento, desde las playas caribeñas hasta las montañas de los Andes. Los venezolanos son conocidos por su alegría y hospitalidad, a pesar de los desafíos que enfrenta el país. La cultura en Venezuela es rica y diversa, con influencias indígenas, africanas y europeas que se reflejan en su música, danzas y festividades. En términos de seguridad, es importante estar bien informado y seguir recomendaciones locales, pero muchas áreas turísticas siguen siendo accesibles y seguras. Venezuela es un destino espectacular para quienes buscan naturaleza virgen y playas paradisíacas, con lugares como el Parque Nacional Canaima, la Isla de Margarita y el Salto Ángel, la cascada más alta del mundo.",
+    "id": "VE",
+    "name": "Venezuela"
+  },
+  {
+    "img": [
+      "joshua-gobin-1TnaUrrcm88-unsplash-guayana.jpg",
+      "dinesh-chandrapal-pZyD9-XReQQ-unsplash-guayana.jpg",
+      "joshua-gobin-uYOg7yISW08-unsplash-guayana.jpg"
+    ],
+    "descripcion": "Guyana es un país cálido y húmedo, con una rica mezcla de culturas que incluye influencias africanas, indias y amerindias. La gente en Guyana es acogedora y está profundamente conectada con su herencia cultural, que se manifiesta en su música, festividades y cocina. El clima en Guyana es tropical, lo que permite disfrutar de su exuberante selva y ríos durante todo el año. La seguridad en Guyana es razonable, pero es aconsejable tomar precauciones en áreas urbanas. Guyana es un destino ideal para quienes buscan aventuras fuera de lo común, con paisajes vírgenes y experiencias auténticas que incluyen la exploración de la selva amazónica y la visita a las impresionantes cascadas Kaieteur.",
+    "id": "GY",
+    "name": "Guyana"
+  },
+  {
+    "img": [
+      "selahgraphy-2WfZ4kjezIA-unsplash-zuriname.jpg",
+      "e-go-studios--V6X7bwyuMI-unsplash-zuriname.jpg",
+      "vincent-van-zalinge-oKyF4ZYUo2k-unsplash-zuriname.jpg"
+    ],
+    "descripcion": "Surinam es un país tropical, caluroso y verde, con una mezcla única de culturas que incluyen influencias africanas, indias, javanesas y europeas. Los surinameses son acogedores y su cultura es vibrante, reflejada en sus coloridos mercados, festividades y una gastronomía diversa. El clima en Surinam es cálido y húmedo, ideal para quienes disfrutan del contacto con la naturaleza. La seguridad en Surinam es buena, pero es aconsejable tomar precauciones en áreas menos conocidas. Surinam es un destino ideal para quienes buscan una experiencia cultural auténtica y contacto con la naturaleza, con atracciones como la ciudad de Paramaribo, patrimonio de la humanidad, y la rica biodiversidad de sus selvas tropicales.",
+    "id": "SR",
+    "name": "Surinam"
+  },
+  {
+    "img": [
+      "anthony-delanoix-pt4j4bGSPmw-unsplash-francia.jpg",
+      "celine-ylmz-L2ost-ZEmK8-unsplash-francia.jpg",
+      "leonard-cotte-c1Jp-fo53U8-unsplash-francia.jpg"
+    ],
+    "descripcion": "La Guayana Francesa es un rincón tropical de Francia en América del Sur, donde la cultura europea se mezcla con la exuberancia del Amazonas. La gente en la Guayana Francesa es diversa, con una población compuesta por descendientes de europeos, africanos, amerindios y asiáticos, lo que crea una rica herencia cultural. El clima es tropical, con temperaturas cálidas durante todo el año y una humedad considerable. La seguridad en la Guayana Francesa es alta, lo que lo convierte en un destino seguro para explorar. Es un lugar único para unas vacaciones, ofreciendo una combinación de cultura europea, naturaleza salvaje y aventuras en la selva amazónica. Los visitantes pueden disfrutar de actividades como el ecoturismo, la observación de vida silvestre y el descubrimiento de sitios históricos.",
+    "id": "GF",
+    "name": "Guayana Francesa"
+  }
+]

@@ -1,98 +1,94 @@
 "use client";
 
-import { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { useQuery } from "@apollo/client";
-import { GET_COUNTRIES } from "@/lib/gql";
-import client from "@/lib/client";
 
-import {
-  CountryCoordinates,
-  CountriesGraphQL,
-  CountryWithCoordinates,
-} from "@/interfaces/interface";
+import { CountryCoordinates } from "@/interfaces/interface";
+import { useMapWhitMarkers } from "./useMapWhitMarkers";
+import { InputText } from "../ui/InputText";
+import { PopupContainer } from "./Popup";
+import NotFound from "@/app/not-found";
 
-interface Props {
+const svgIcon = L.icon({
+  iconUrl: "/marker.svg",
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32],
+});
+
+export interface MapWithMarkersProps {
   locations: CountryCoordinates[];
 }
 
-export function MapWithMarkers({ locations }: Props) {
-  const { loading, error, data } = useQuery<{ countries: CountriesGraphQL[] }>(
-    GET_COUNTRIES,
-    { client }
-  );
+const Skeleton = ({ className }: { className: string }) => (
+  <div className={`animate-pulse bg-gray-200 ${className}`} />
+);
 
-  function getLocation(): L.LatLngExpression | undefined {
-    if (locations.length === 0) {
-      return [30.0, -50.0];
-    }
+export function MapWithMarkers({ locations }: MapWithMarkersProps) {
+  const {
+    data,
+    error,
+    filteredCountries,
+    loading,
+    search,
+    errorSearch,
+    handleSearch,
+  } = useMapWhitMarkers({ locations });
 
-    return [20.0, -80.0];
+  if (loading)
+    return (
+      <div className="w-full h-[800px] rounded-lg shadow-sm">
+        <Skeleton className="w-full h-full rounded-lg" />
+      </div>
+    );
+
+  if (error || !data || !data.countries) {
+    return <NotFound isErrorPage={false} />;
   }
-
-  function getZoom(): number {
-    if (locations.length === 0) {
-        return 5;
-      }
-  
-      return 2;
-  }
-
-  console.log(getLocation());
-
-  useEffect(() => {
-    L.Icon.Default.mergeOptions({
-      iconRetinaUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
-      iconUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-      shadowUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
-    });
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-  if (!data || !data.countries) return <p>No data available</p>;
-
-  const countriesWithCoordinates = data.countries
-    .map((country) => {
-      const coords = locations.find(
-        (location) => location["ISO Code"] === country.code
-      );
-      if (coords && coords.Latitude != null && coords.Longitude != null) {
-        return { ...country, ...coords };
-      }
-      return null;
-    })
-    .filter((country): country is CountryWithCoordinates => country !== null);
 
   return (
-    <MapContainer
-      center={getLocation()}
-      zoom={getZoom()}
-      style={{ height: "500px", width: "100%" }}
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      {countriesWithCoordinates.map((location, index) => (
-        <Marker key={index} position={[location.Latitude, location.Longitude]}>
-          <Popup>
-            <div className="flex flex-col gap-4">
-              <h2>{location.name}</h2>
-              <p>Capital: {location.capital}</p>
-              <p>Currency: {location.currency}</p>
-              <p>Emoji: {location.emoji}</p>
-              <p>Native: {location.native}</p>
-              <p>Continent: {location.continent.name}</p>
-            </div>
-          </Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+    <>
+      <InputText value={search} onChange={handleSearch} error={errorSearch} />
+
+      <MapContainer
+        center={[20.0, -80.0]}
+        zoom={2}
+        className="w-full h-[800px] rounded-lg shadow-sm"
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        {filteredCountries.map(
+          (
+            {
+              Country,
+              emoji,
+              capital,
+              currency,
+              native,
+              continent,
+              Latitude,
+              Longitude,
+              "ISO Code": ISoCode,
+            },
+            index
+          ) => (
+            <Marker key={index} position={[Latitude, Longitude]} icon={svgIcon}>
+              <PopupContainer
+                country={Country}
+                emoji={emoji}
+                capital={capital}
+                currency={currency}
+                native={native}
+                continent={continent}
+                ISoCode={ISoCode}
+              />
+            </Marker>
+          )
+        )}
+      </MapContainer>
+    </>
   );
 }
