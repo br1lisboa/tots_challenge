@@ -5,11 +5,10 @@ import { Footer } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
-//TODO: Cambia los valores de los metadatos por los de tu aplicación.
 export const metadata: Metadata = {
   title: "LeafletJS with Apollo Client",
   description: "Application dedicated to TOST",
-  authors: [{ name: "Bruno Lisboa" }], // Puedes cambiar esto por el nombre del autor del proyecto.
+  authors: [{ name: "Bruno Lisboa" }],
   keywords: [
     "LeafletJS",
     "Apollo Client",
@@ -18,8 +17,6 @@ export const metadata: Metadata = {
     "GraphQL",
     "Mapping",
   ],
-  viewport: "width=device-width, initial-scale=1.0",
-  themeColor: "#ffffff", // Cambia esto si tienes un color específico para el tema de tu aplicación.
   openGraph: {
     title: "LeafletJS with Apollo Client",
     description:

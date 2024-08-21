@@ -9,9 +9,9 @@ function CheckContainer({ children }: { children: React.ReactNode }) {
         stroke="currentColor"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
@@ -21,10 +21,10 @@ function CheckContainer({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Hero() {
+export function Hero({ className }: { className?: string }) {
   return (
     <>
-      <section className="bg-transparent">
+      <section className={`bg-transparent ${className}`}>
         <div className="container flex flex-col m-auto items-center w-full gap-4 pt-4">
           <h1 className="text-2xl font-semibold tracking-wide text-gray-800 text-center">
             TOTS - Challenge

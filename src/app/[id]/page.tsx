@@ -23,7 +23,7 @@ export default function CountryPage({ params: { id } }: CountryPageProps) {
 
   return (
     <>
-      <Hero />
+      <Hero className="pt-4"/>
       <section className="bg-transparent h-full max-w-[900px] m-auto py-8">
         <div className="lg:-mx-6 lg:flex lg:items-center">
           <SlideShow
@@ -32,8 +32,8 @@ export default function CountryPage({ params: { id } }: CountryPageProps) {
             className="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem] md:pt-8"
           />
 
-          <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
-            <p className="text-5xl font-semibold text-blue-500 ">“</p>
+          <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0 px-4 md:px-0">
+            <p className="text-5xl font-semibold text-blue-500 pt-28 md:pt-0">“</p>
 
             <h1 className="text-2xl font-semibold text-gray-800  lg:text-3xl lg:w-96">
               {country?.name}
