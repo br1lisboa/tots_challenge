@@ -36,14 +36,14 @@ Sigue estos pasos para desplegar y correr el proyecto en tu entorno local:
 
    ```bash
    git clone https://github.com/tu_usuario/tots-challenge.git
-   cd tots-challenge```
+   cd tots-challenge
 
 1. **Instala dependencias**:
 
    ```bash
-   pnpm install```
+   pnpm install
 
 1. **Inicia el servidor de desarrollo:**:
 
    ```bash
-   pnpm run dev```
+   pnpm run dev
