@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import { GET_COUNTRIES } from "@/lib/gql";
 import { useQuery } from "@apollo/client";
@@ -14,7 +15,8 @@ import {
 } from "@/interfaces/interface";
 
 export function useMapWhitMarkers({ locations }: MapContainerProps) {
-  const [search, setSearch] = useState("");
+  const router = useRouter();
+  const searchQuery = useSearchParams().get("search");
 
   const { loading, error, data } = useQuery<{ countries: CountriesGraphQL[] }>(
     GET_COUNTRIES,
@@ -52,23 +54,27 @@ export function useMapWhitMarkers({ locations }: MapContainerProps) {
   }, [data, countryMap]);
 
   const filteredCountries = useMemo(() => {
+    if (!searchQuery) return countriesWithCoordinates;
     return countriesWithCoordinates.filter((country) =>
-      country.Country.toLowerCase().includes(search.toLowerCase())
+      country.Country.toLowerCase().includes(searchQuery.toLowerCase())
     );
-  }, [search, countriesWithCoordinates]);
+  }, [countriesWithCoordinates, searchQuery]);
 
   const errorSearch =
     filteredCountries.length === 0 ? "Wops, no encontramos el país" : "";
 
-  const handleSearch = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value);
-  }, []);
+  const handleSearch = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      router.push(`?search=${e.target.value}`, { scroll: false });
+    },
+    [router]
+  );
 
   return {
     loading,
     error,
     data,
-    search,
+    search: searchQuery ?? "",
     filteredCountries,
     errorSearch,
     handleSearch,
