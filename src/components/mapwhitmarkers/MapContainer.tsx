@@ -5,10 +5,10 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { PopupContainer } from "./Popup";
-import { CountryCoordinates } from "@/interfaces/interface";
+import { CountryCoordinates, CountryWithCoordinates } from "@/interfaces/interface";
 
 export interface MapContainerDynamicProps {
-  filteredCountries: CountryCoordinates[];
+  filteredCountries: CountryWithCoordinates[];
 }
 
 const svgIcon = L.icon({
