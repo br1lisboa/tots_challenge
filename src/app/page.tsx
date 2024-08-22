@@ -1,4 +1,7 @@
-import { Footer, MapWithMarkers, Hero } from "@/components";
+"use client"
+
+import {   Hero, MapWithMarkers } from "@/components";
+
 
 import countriesJSON from "@/data/countries.json";
 

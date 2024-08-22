@@ -1,7 +1,7 @@
 "use client";
 
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 import { CountryCoordinates } from "@/interfaces/interface";
@@ -9,13 +9,12 @@ import { useMapWhitMarkers } from "./useMapWhitMarkers";
 import { InputText } from "../ui/InputText";
 import { PopupContainer } from "./Popup";
 import NotFound from "@/app/not-found";
+import MapContainerDynamic from "./MapContainer";
+import dynamic from "next/dynamic";
 
-const svgIcon = L.icon({
-  iconUrl: "/marker.svg",
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32],
-});
+const DynamicMap = dynamic(()=>import("./MapContainer"),{
+  ssr: false
+})
 
 export interface MapWithMarkersProps {
   locations: CountryCoordinates[];
@@ -51,7 +50,8 @@ export function MapWithMarkers({ locations }: MapWithMarkersProps) {
     <>
       <InputText value={search} onChange={handleSearch} error={errorSearch} />
 
-      <MapContainer
+      <DynamicMap filteredCountries={filteredCountries}/>
+      {/* <MapContainer
         center={[20.0, -80.0]}
         zoom={2}
         className="w-full h-[800px] rounded-lg shadow-sm"
@@ -75,7 +75,7 @@ export function MapWithMarkers({ locations }: MapWithMarkersProps) {
             },
             index
           ) => (
-            <Marker key={index} position={[Latitude, Longitude]} icon={svgIcon}>
+            <Marker key={index} position={[Latitude, Longitude]} >
               <PopupContainer
                 country={Country}
                 emoji={emoji}
@@ -88,7 +88,7 @@ export function MapWithMarkers({ locations }: MapWithMarkersProps) {
             </Marker>
           )
         )}
-      </MapContainer>
+      </MapContainer> */}
     </>
   );
 }
