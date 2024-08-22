@@ -21,8 +21,8 @@ export default function CountryPage({ params: { id } }: CountryPageProps) {
 
   return (
     <>
-      <section className="bg-transparent h-full max-w-[900px] m-auto py-8">
-        <div className="lg:-mx-6 lg:flex lg:items-center">
+      <section className="bg-transparent h-full max-w-[1200px] m-auto py-8">
+        <div className="lg:-mx-6 lg:flex lg:items-center lg:gap-6">
           <SlideShow
             title={country?.descripcion}
             slides={country.img}
@@ -30,7 +30,7 @@ export default function CountryPage({ params: { id } }: CountryPageProps) {
           />
 
           <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0 px-4 xl:px-0">
-            <p className="text-5xl font-semibold text-blue-500 pt-28 xl:pt-0">
+            <p className="text-5xl font-semibold text-blue-500 pt-28 lg:pt-0 xl:pt-0">
               “
             </p>
 
