@@ -1,64 +1,53 @@
-// src/components/mapwhitmarkers/MapContainerDynamic.tsx
 "use client";
 
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
-import L from "leaflet";
+import dynamic from "next/dynamic";
+
+import NotFound from "@/app/not-found";
+import { InputText } from "@/components/";
+import { CountryCoordinates } from "@/interfaces/interface";
+
+import { useMapWhitMarkers } from "./useMapWhitMarkers";
 import "leaflet/dist/leaflet.css";
-import { PopupContainer } from "./Popup";
-import { CountryCoordinates, CountryWithCoordinates } from "@/interfaces/interface";
 
-export interface MapContainerDynamicProps {
-  filteredCountries: CountryWithCoordinates[];
-}
-
-const svgIcon = L.icon({
-  iconUrl: "/marker.svg",
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32],
+const DynamicMap = dynamic(() => import("./Map"), {
+  ssr: false,
 });
 
-function MapContainerDynamic({ filteredCountries }: MapContainerDynamicProps) {
-  return (
-    <MapContainer
-      center={[20.0, -80.0]}
-      zoom={2}
-      className="w-full h-[800px] rounded-lg shadow-sm"
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      {filteredCountries.map(
-        (
-          {
-            Country,
-            emoji,
-            capital,
-            currency,
-            native,
-            continent,
-            Latitude,
-            Longitude,
-            "ISO Code": ISoCode,
-          },
-          index
-        ) => (
-          <Marker key={index} position={[Latitude, Longitude]} icon={svgIcon}>
-            <PopupContainer
-              country={Country}
-              emoji={emoji}
-              capital={capital}
-              currency={currency}
-              native={native}
-              continent={continent}
-              ISoCode={ISoCode}
-            />
-          </Marker>
-        )
-      )}
-    </MapContainer>
-  );
+export interface MapContainerProps {
+  locations: CountryCoordinates[];
 }
 
-export default MapContainerDynamic;
+function Skeleton({ className }: { className: string }) {
+  return <div className={`animate-pulse bg-gray-200 ${className}`} />;
+}
+
+export function MapContainer({ locations }: MapContainerProps) {
+  const {
+    data,
+    error,
+    filteredCountries,
+    loading,
+    search,
+    errorSearch,
+    handleSearch,
+  } = useMapWhitMarkers({ locations });
+
+  if (loading)
+    return (
+      <div className="w-full h-[800px] rounded-lg shadow-sm">
+        <Skeleton className="w-full h-full rounded-lg" />
+      </div>
+    );
+
+  if (error || !data || !data.countries) {
+    return <NotFound isErrorPage={false} />;
+  }
+
+  return (
+    <>
+      <InputText value={search} onChange={handleSearch} error={errorSearch} />
+
+      <DynamicMap filteredCountries={filteredCountries} />
+    </>
+  );
+}
